@@ -61,6 +61,9 @@
       this.outilsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.personnaliserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+      this.FrenchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.EnglishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.sommaireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.indexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -166,6 +169,7 @@
             this.fichierToolStripMenuItem,
             this.editionToolStripMenuItem,
             this.outilsToolStripMenuItem,
+            this.toolStripMenuItem1,
             this.aideToolStripMenuItem});
       this.menuStrip1.Location = new System.Drawing.Point(0, 0);
       this.menuStrip1.Name = "menuStrip1";
@@ -355,6 +359,29 @@
       this.optionsToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
       this.optionsToolStripMenuItem.Text = "&Options";
       // 
+      // toolStripMenuItem1
+      // 
+      this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FrenchToolStripMenuItem,
+            this.EnglishToolStripMenuItem});
+      this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+      this.toolStripMenuItem1.Size = new System.Drawing.Size(71, 20);
+      this.toolStripMenuItem1.Text = "Language";
+      // 
+      // FrenchToolStripMenuItem
+      // 
+      this.FrenchToolStripMenuItem.Name = "FrenchToolStripMenuItem";
+      this.FrenchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+      this.FrenchToolStripMenuItem.Text = "Français";
+      this.FrenchToolStripMenuItem.Click += new System.EventHandler(this.FrenchToolStripMenuItem_Click);
+      // 
+      // EnglishToolStripMenuItem
+      // 
+      this.EnglishToolStripMenuItem.Name = "EnglishToolStripMenuItem";
+      this.EnglishToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+      this.EnglishToolStripMenuItem.Text = "Anglais";
+      this.EnglishToolStripMenuItem.Click += new System.EventHandler(this.EnglishToolStripMenuItem_Click);
+      // 
       // aideToolStripMenuItem
       // 
       this.aideToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -497,6 +524,9 @@
     private System.Windows.Forms.ProgressBar progressBarMain;
     private System.Windows.Forms.Label labelNumberOfLinesBefore;
     private System.Windows.Forms.TextBox textBoxNumberOfLinesBefore;
+    private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+    private System.Windows.Forms.ToolStripMenuItem FrenchToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem EnglishToolStripMenuItem;
   }
 }
 

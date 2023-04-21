@@ -70,5 +70,29 @@ namespace FredLogViewer.Properties {
                 this["WindowLeft"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Translations.xml")]
+        public string LanguageFileName {
+            get {
+                return ((string)(this["LanguageFileName"]));
+            }
+            set {
+                this["LanguageFileName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("English")]
+        public string LastLanguageUsed {
+            get {
+                return ((string)(this["LastLanguageUsed"]));
+            }
+            set {
+                this["LastLanguageUsed"] = value;
+            }
+        }
     }
 }

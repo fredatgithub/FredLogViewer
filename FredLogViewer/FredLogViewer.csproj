@@ -127,11 +127,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SampleCode\Translations.xml" />
-    <Content Include="SampleCode\WinFormApplicationEnglishFrenchMenus.txt" />
-    <Content Include="SampleCode\WinFormApplicationVersionSampleCode.txt" />
-    <Content Include="SampleCode\WinFormApplicationWindowSizeValuesSampleCode.txt" />
-    <Content Include="Translations.xml" />
+    <Content Include="Translations.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
