@@ -20,5 +20,14 @@
     <Setting Name="LastLanguageUsed" Type="System.String" Scope="User">
       <Value Profile="(Default)">English</Value>
     </Setting>
+    <Setting Name="textBoxFilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="textBoxNumberOfLinesBefore" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="textBoxSearch" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -139,6 +139,9 @@ namespace FredLogViewer
       Settings.Default.WindowLeft = Left;
       Settings.Default.WindowTop = Top;
       Settings.Default.LastLanguageUsed = FrenchToolStripMenuItem.Checked ? "French" : "English";
+      Settings.Default.textBoxSearch = textBoxSearch.Text;
+      Settings.Default.textBoxNumberOfLinesBefore = textBoxNumberOfLinesBefore.Text;
+      Settings.Default.textBoxFilePath = textBoxFilePath.Text;
       Settings.Default.Save();
     }
 
@@ -150,6 +153,9 @@ namespace FredLogViewer
       Left = Settings.Default.WindowLeft < 0 ? 0 : Settings.Default.WindowLeft;
       FrenchToolStripMenuItem.Checked = Settings.Default.LastLanguageUsed == "French";
       EnglishToolStripMenuItem.Checked = Settings.Default.LastLanguageUsed == "English";
+      textBoxSearch.Text = Settings.Default.textBoxSearch;
+      textBoxNumberOfLinesBefore.Text = Settings.Default.textBoxNumberOfLinesBefore;
+      textBoxFilePath.Text = Settings.Default.textBoxFilePath;
       Text += DisplayTitle();
     }
 

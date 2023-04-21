@@ -94,5 +94,41 @@ namespace FredLogViewer.Properties {
                 this["LastLanguageUsed"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string textBoxFilePath {
+            get {
+                return ((string)(this["textBoxFilePath"]));
+            }
+            set {
+                this["textBoxFilePath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public string textBoxNumberOfLinesBefore {
+            get {
+                return ((string)(this["textBoxNumberOfLinesBefore"]));
+            }
+            set {
+                this["textBoxNumberOfLinesBefore"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string textBoxSearch {
+            get {
+                return ((string)(this["textBoxSearch"]));
+            }
+            set {
+                this["textBoxSearch"] = value;
+            }
+        }
     }
 }
