@@ -115,6 +115,7 @@ namespace FredLogViewer
         throw new Exception(exception.Message);
       }
 
+      buttonSearch.Enabled = true;
       MessageBox.Show("Chargement fini");
     }
 
@@ -124,6 +125,7 @@ namespace FredLogViewer
       if (ofd.ShowDialog() == DialogResult.OK)
       {
         textBoxFilePath.Text = ofd.FileName;
+        buttonSearch.Enabled = false;
       }
     }
 
@@ -317,6 +319,23 @@ namespace FredLogViewer
       FrenchToolStripMenuItem.Checked = false;
       EnglishToolStripMenuItem.Checked = true;
       SetLanguage(Language.English.ToString());
+    }
+
+    private void TextBoxFilePath_TextChanged(object sender, EventArgs e)
+    {
+      if (string.IsNullOrEmpty(textBoxFilePath.Text))
+      {
+        buttonSearch.Enabled = false;
+      }
+
+      if (File.Exists(textBoxFilePath.Text))
+      {
+        buttonSearch.Enabled = true;
+      }
+      else
+      {
+        buttonSearch.Enabled = false;
+      }
     }
   }
 }

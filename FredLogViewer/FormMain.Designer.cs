@@ -128,6 +128,7 @@
       this.textBoxResult.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
       this.textBoxResult.Multiline = true;
       this.textBoxResult.Name = "textBoxResult";
+      this.textBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Both;
       this.textBoxResult.Size = new System.Drawing.Size(1368, 428);
       this.textBoxResult.TabIndex = 4;
       // 
@@ -151,6 +152,7 @@
       this.textBoxFilePath.Size = new System.Drawing.Size(1128, 26);
       this.textBoxFilePath.TabIndex = 5;
       this.textBoxFilePath.Text = "D:\\trace\\oid_ora_13324_mytraceid.trc";
+      this.textBoxFilePath.TextChanged += new System.EventHandler(this.TextBoxFilePath_TextChanged);
       // 
       // buttonFilename
       // 
