@@ -31,6 +31,12 @@ namespace FredLogViewer
 
     private void ButtonSearch_Click(object sender, EventArgs e)
     {
+      if (logLines.Count == 0)
+      {
+        MessageBox.Show("You have to load the file before searching", "File not loaded", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        return;
+      }
+
       // Add a please-wait form
       textBoxResult.Text = string.Empty;
       Application.DoEvents();
