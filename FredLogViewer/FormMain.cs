@@ -156,7 +156,7 @@ namespace FredLogViewer
       Settings.Default.WindowWidth = Width;
       Settings.Default.WindowLeft = Left;
       Settings.Default.WindowTop = Top;
-      Settings.Default.LastLanguageUsed = FrenchToolStripMenuItem.Checked ? "French" : "English";
+      Settings.Default.LastLanguageUsed = frenchToolStripMenuItem.Checked ? "French" : "English";
       Settings.Default.textBoxSearch = textBoxSearch.Text;
       Settings.Default.textBoxNumberOfLinesBefore = textBoxNumberOfLinesBefore.Text;
       Settings.Default.textBoxFilePath = textBoxFilePath.Text;
@@ -169,8 +169,8 @@ namespace FredLogViewer
       Height = Settings.Default.WindowHeight;
       Top = Settings.Default.WindowTop < 0 ? 0 : Settings.Default.WindowTop;
       Left = Settings.Default.WindowLeft < 0 ? 0 : Settings.Default.WindowLeft;
-      FrenchToolStripMenuItem.Checked = Settings.Default.LastLanguageUsed == "French";
-      EnglishToolStripMenuItem.Checked = Settings.Default.LastLanguageUsed == "English";
+      frenchToolStripMenuItem.Checked = Settings.Default.LastLanguageUsed == "French";
+      englishToolStripMenuItem.Checked = Settings.Default.LastLanguageUsed == "English";
       textBoxSearch.Text = Settings.Default.textBoxSearch;
       textBoxNumberOfLinesBefore.Text = Settings.Default.textBoxNumberOfLinesBefore;
       textBoxFilePath.Text = Settings.Default.textBoxFilePath;
@@ -194,68 +194,45 @@ namespace FredLogViewer
       switch (myLanguage)
       {
         case "English":
-          //frenchToolStripMenuItem.Checked = false;
-          //englishToolStripMenuItem.Checked = true;
-          //fileToolStripMenuItem.Text = languageDicoEn["MenuFile"];
-          //newToolStripMenuItem.Text = languageDicoEn["MenuFileNew"];
-          //openToolStripMenuItem.Text = languageDicoEn["MenuFileOpen"];
-          //saveToolStripMenuItem.Text = languageDicoEn["MenuFileSave"];
-          //saveasToolStripMenuItem.Text = languageDicoEn["MenuFileSaveAs"];
-          //printPreviewToolStripMenuItem.Text = languageDicoEn["MenuFilePrint"];
-          //printPreviewToolStripMenuItem.Text = languageDicoEn["MenufilePageSetup"];
-          //quitToolStripMenuItem.Text = languageDicoEn["MenufileQuit"];
-          //editToolStripMenuItem.Text = languageDicoEn["MenuEdit"];
-          //cancelToolStripMenuItem.Text = languageDicoEn["MenuEditCancel"];
-          //redoToolStripMenuItem.Text = languageDicoEn["MenuEditRedo"];
-          //cutToolStripMenuItem.Text = languageDicoEn["MenuEditCut"];
-          //copyToolStripMenuItem.Text = languageDicoEn["MenuEditCopy"];
-          //pasteToolStripMenuItem.Text = languageDicoEn["MenuEditPaste"];
-          //selectAllToolStripMenuItem.Text = languageDicoEn["MenuEditSelectAll"];
-          //toolsToolStripMenuItem.Text = languageDicoEn["MenuTools"];
-          //personalizeToolStripMenuItem.Text = languageDicoEn["MenuToolsCustomize"];
-          //optionsToolStripMenuItem.Text = languageDicoEn["MenuToolsOptions"];
-          //languagetoolStripMenuItem.Text = languageDicoEn["MenuLanguage"];
-          //englishToolStripMenuItem.Text = languageDicoEn["MenuLanguageEnglish"];
-          //frenchToolStripMenuItem.Text = languageDicoEn["MenuLanguageFrench"];
-          //helpToolStripMenuItem.Text = languageDicoEn["MenuHelp"];
-          //summaryToolStripMenuItem.Text = languageDicoEn["MenuHelpSummary"];
-          //indexToolStripMenuItem.Text = languageDicoEn["MenuHelpIndex"];
-          //searchToolStripMenuItem.Text = languageDicoEn["MenuHelpSearch"];
-          //aboutToolStripMenuItem.Text = languageDicoEn["MenuHelpAbout"];
+          frenchToolStripMenuItem.Checked = false;
+          englishToolStripMenuItem.Checked = true;
+          fileToolStripMenuItem.Text = languageDicoEn["MenuFile"];
+          quitToolStripMenuItem.Text = languageDicoEn["MenufileQuit"];
+          editToolStripMenuItem.Text = languageDicoEn["MenuEdit"];
+          cancelToolStripMenuItem.Text = languageDicoEn["MenuEditCancel"];
+          redoToolStripMenuItem.Text = languageDicoEn["MenuEditRedo"];
+          cutToolStripMenuItem.Text = languageDicoEn["MenuEditCut"];
+          copyToolStripMenuItem.Text = languageDicoEn["MenuEditCopy"];
+          pasteToolStripMenuItem.Text = languageDicoEn["MenuEditPaste"];
+          selectAllToolStripMenuItem.Text = languageDicoEn["MenuEditSelectAll"];
+          languagetoolStripMenuItem.Text = languageDicoEn["MenuLanguage"];
+          englishToolStripMenuItem.Text = languageDicoEn["MenuLanguageEnglish"];
+          frenchToolStripMenuItem.Text = languageDicoEn["MenuLanguageFrench"];
+          helpToolStripMenuItem.Text = languageDicoEn["MenuHelp"];
+          aboutToolStripMenuItem.Text = languageDicoEn["MenuHelpAbout"];
+          buttonFilename.Text = languageDicoEn["ChooseALogFile"];
 
           break;
         case "French":
-          //frenchToolStripMenuItem.Checked = true;
-          //englishToolStripMenuItem.Checked = false;
-          //fileToolStripMenuItem.Text = languageDicoFr["MenuFile"];
-          //newToolStripMenuItem.Text = languageDicoFr["MenuFileNew"];
-          //openToolStripMenuItem.Text = languageDicoFr["MenuFileOpen"];
-          //saveToolStripMenuItem.Text = languageDicoFr["MenuFileSave"];
-          //saveasToolStripMenuItem.Text = languageDicoFr["MenuFileSaveAs"];
-          //printPreviewToolStripMenuItem.Text = languageDicoFr["MenuFilePrint"];
-          //printPreviewToolStripMenuItem.Text = languageDicoFr["MenufilePageSetup"];
-          //quitToolStripMenuItem.Text = languageDicoFr["MenufileQuit"];
-          //editToolStripMenuItem.Text = languageDicoFr["MenuEdit"];
-          //cancelToolStripMenuItem.Text = languageDicoFr["MenuEditCancel"];
-          //redoToolStripMenuItem.Text = languageDicoFr["MenuEditRedo"];
-          //cutToolStripMenuItem.Text = languageDicoFr["MenuEditCut"];
-          //copyToolStripMenuItem.Text = languageDicoFr["MenuEditCopy"];
-          //pasteToolStripMenuItem.Text = languageDicoFr["MenuEditPaste"];
-          //selectAllToolStripMenuItem.Text = languageDicoFr["MenuEditSelectAll"];
-          //toolsToolStripMenuItem.Text = languageDicoFr["MenuTools"];
-          //personalizeToolStripMenuItem.Text = languageDicoFr["MenuToolsCustomize"];
-          //optionsToolStripMenuItem.Text = languageDicoFr["MenuToolsOptions"];
-          //languagetoolStripMenuItem.Text = languageDicoFr["MenuLanguage"];
-          //englishToolStripMenuItem.Text = languageDicoFr["MenuLanguageEnglish"];
-          //frenchToolStripMenuItem.Text = languageDicoFr["MenuLanguageFrench"];
-          //helpToolStripMenuItem.Text = languageDicoFr["MenuHelp"];
-          //summaryToolStripMenuItem.Text = languageDicoFr["MenuHelpSummary"];
-          //indexToolStripMenuItem.Text = languageDicoFr["MenuHelpIndex"];
-          //searchToolStripMenuItem.Text = languageDicoFr["MenuHelpSearch"];
-          //aboutToolStripMenuItem.Text = languageDicoFr["MenuHelpAbout"];
+          frenchToolStripMenuItem.Checked = true;
+          englishToolStripMenuItem.Checked = false;
+          fileToolStripMenuItem.Text = languageDicoFr["MenuFile"];
+          quitToolStripMenuItem.Text = languageDicoFr["MenufileQuit"];
+          editToolStripMenuItem.Text = languageDicoFr["MenuEdit"];
+          cancelToolStripMenuItem.Text = languageDicoFr["MenuEditCancel"];
+          redoToolStripMenuItem.Text = languageDicoFr["MenuEditRedo"];
+          cutToolStripMenuItem.Text = languageDicoFr["MenuEditCut"];
+          copyToolStripMenuItem.Text = languageDicoFr["MenuEditCopy"];
+          pasteToolStripMenuItem.Text = languageDicoFr["MenuEditPaste"];
+          selectAllToolStripMenuItem.Text = languageDicoFr["MenuEditSelectAll"];
+          languagetoolStripMenuItem.Text = languageDicoFr["MenuLanguage"];
+          englishToolStripMenuItem.Text = languageDicoFr["MenuLanguageEnglish"];
+          frenchToolStripMenuItem.Text = languageDicoFr["MenuLanguageFrench"];
+          helpToolStripMenuItem.Text = languageDicoFr["MenuHelp"];
+          aboutToolStripMenuItem.Text = languageDicoFr["MenuHelpAbout"];
+          buttonFilename.Text = languageDicoFr["ChooseALogFile"];
 
           break;
-
       }
     }
 
@@ -325,15 +302,12 @@ namespace FredLogViewer
 
     private void FrenchToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      FrenchToolStripMenuItem.Checked = true;
-      EnglishToolStripMenuItem.Checked = false;
       SetLanguage(Language.French.ToString());
     }
 
     private void EnglishToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      FrenchToolStripMenuItem.Checked = false;
-      EnglishToolStripMenuItem.Checked = true;
+      
       SetLanguage(Language.English.ToString());
     }
 
@@ -352,6 +326,12 @@ namespace FredLogViewer
       {
         buttonSearch.Enabled = false;
       }
+    }
+
+    private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      AboutBoxApp about = new AboutBoxApp();
+      about.Show();
     }
   }
 }
