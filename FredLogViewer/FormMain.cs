@@ -19,14 +19,22 @@ namespace FredLogViewer
 
     private readonly List<string> logLines = new List<string>();
     private int numberOfLines = 1;
-    readonly Dictionary<string, string> languageDicoEn = new Dictionary<string, string>();
-    readonly Dictionary<string, string> languageDicoFr = new Dictionary<string, string>();
+    private readonly Dictionary<string, string> languageDicoEn = new Dictionary<string, string>();
+    private readonly Dictionary<string, string> languageDicoFr = new Dictionary<string, string>();
+    private bool FileIsLoaded = false;
 
     private void FormMain_Load(object sender, EventArgs e)
     {
       GetWindowValue();
       LoadLanguages();
       SetLanguage(Settings.Default.LastLanguageUsed);
+      SetVariablesAtStartup();
+    }
+
+    private void SetVariablesAtStartup()
+    {
+      FileIsLoaded = false;
+      buttonSearch.Enabled = false;
     }
 
     private void ButtonSearch_Click(object sender, EventArgs e)
@@ -115,14 +123,15 @@ namespace FredLogViewer
             logLines.Add(line);
           }
         }
+
+        FileIsLoaded = true;
+        buttonSearch.Enabled = true;
+        MessageBox.Show("Chargement fini");
       }
       catch (Exception exception)
       {
         throw new Exception(exception.Message);
       }
-
-      buttonSearch.Enabled = true;
-      MessageBox.Show("Chargement fini");
     }
 
     private void ButtonFilename_Click(object sender, EventArgs e)
@@ -132,6 +141,7 @@ namespace FredLogViewer
       {
         textBoxFilePath.Text = ofd.FileName;
         buttonSearch.Enabled = false;
+        FileIsLoaded = false;
       }
     }
 
