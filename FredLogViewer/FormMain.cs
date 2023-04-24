@@ -57,7 +57,7 @@ namespace FredLogViewer
       var linesAfter = new List<string>();
       if (!int.TryParse(textBoxNumberOfLinesBefore.Text, out numberOfLines))
       {
-        numberOfLines = 1;
+        numberOfLines = 0;
       }
 
       bool itemFound = false;
