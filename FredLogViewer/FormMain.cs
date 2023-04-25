@@ -265,6 +265,7 @@ namespace FredLogViewer
                      englishValue = xElementEnglish.Value,
                      frenchValue = xElementFrench.Value
                    };
+
       foreach (var i in result)
       {
         languageDicoEn.Add(i.name, i.englishValue);
@@ -274,7 +275,7 @@ namespace FredLogViewer
 
     private static void CreateLanguageFile()
     {
-      List<string> minimumVersion = new List<string>
+      var minimumVersion = new List<string>
       {
         "<?xml version=\"1.0\" encoding=\"utf - 8\" ?>",
         "<Document>",
@@ -291,7 +292,7 @@ namespace FredLogViewer
         "</Document>"
       };
 
-      StreamWriter sw = new StreamWriter(Settings.Default.LanguageFileName);
+      var sw = new StreamWriter(Settings.Default.LanguageFileName);
       foreach (string item in minimumVersion)
       {
         sw.WriteLine(item);
@@ -307,7 +308,7 @@ namespace FredLogViewer
 
     private void EnglishToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      
+
       SetLanguage(Language.English.ToString());
     }
 
