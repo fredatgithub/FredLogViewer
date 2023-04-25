@@ -78,7 +78,7 @@
       this.textBoxSearch.Location = new System.Drawing.Point(117, 148);
       this.textBoxSearch.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
       this.textBoxSearch.Name = "textBoxSearch";
-      this.textBoxSearch.Size = new System.Drawing.Size(1277, 26);
+      this.textBoxSearch.Size = new System.Drawing.Size(1277, 35);
       this.textBoxSearch.TabIndex = 1;
       this.textBoxSearch.Text = "VFTS00889";
       // 
@@ -88,7 +88,7 @@
       this.labelSearch.Location = new System.Drawing.Point(20, 154);
       this.labelSearch.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
       this.labelSearch.Name = "labelSearch";
-      this.labelSearch.Size = new System.Drawing.Size(87, 20);
+      this.labelSearch.Size = new System.Drawing.Size(129, 29);
       this.labelSearch.TabIndex = 2;
       this.labelSearch.Text = "Search for:";
       // 
@@ -122,7 +122,7 @@
       this.labelFilePath.Location = new System.Drawing.Point(181, 55);
       this.labelFilePath.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
       this.labelFilePath.Name = "labelFilePath";
-      this.labelFilePath.Size = new System.Drawing.Size(75, 20);
+      this.labelFilePath.Size = new System.Drawing.Size(114, 29);
       this.labelFilePath.TabIndex = 6;
       this.labelFilePath.Text = "File Path:";
       // 
@@ -133,7 +133,7 @@
       this.textBoxFilePath.Location = new System.Drawing.Point(266, 52);
       this.textBoxFilePath.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
       this.textBoxFilePath.Name = "textBoxFilePath";
-      this.textBoxFilePath.Size = new System.Drawing.Size(1128, 26);
+      this.textBoxFilePath.Size = new System.Drawing.Size(1128, 35);
       this.textBoxFilePath.TabIndex = 5;
       this.textBoxFilePath.Text = "D:\\trace\\oid_ora_13324_mytraceid.trc";
       this.textBoxFilePath.TextChanged += new System.EventHandler(this.TextBoxFilePath_TextChanged);
@@ -151,6 +151,8 @@
       // 
       // menuStrip1
       // 
+      this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+      this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
       this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
@@ -158,7 +160,7 @@
             this.helpToolStripMenuItem});
       this.menuStrip1.Location = new System.Drawing.Point(0, 0);
       this.menuStrip1.Name = "menuStrip1";
-      this.menuStrip1.Size = new System.Drawing.Size(1429, 24);
+      this.menuStrip1.Size = new System.Drawing.Size(1429, 33);
       this.menuStrip1.TabIndex = 8;
       this.menuStrip1.Text = "menuStrip1";
       // 
@@ -167,13 +169,13 @@
       this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quitToolStripMenuItem});
       this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-      this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+      this.fileToolStripMenuItem.Size = new System.Drawing.Size(78, 29);
       this.fileToolStripMenuItem.Text = "&Fichier";
       // 
       // quitToolStripMenuItem
       // 
       this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-      this.quitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+      this.quitToolStripMenuItem.Size = new System.Drawing.Size(169, 34);
       this.quitToolStripMenuItem.Text = "&Quitter";
       this.quitToolStripMenuItem.Click += new System.EventHandler(this.QuitToolStripMenuItem_Click);
       // 
@@ -189,27 +191,27 @@
             this.toolStripSeparator4,
             this.selectAllToolStripMenuItem});
       this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-      this.editToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+      this.editToolStripMenuItem.Size = new System.Drawing.Size(83, 29);
       this.editToolStripMenuItem.Text = "&Edition";
       // 
       // cancelToolStripMenuItem
       // 
       this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
       this.cancelToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-      this.cancelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+      this.cancelToolStripMenuItem.Size = new System.Drawing.Size(248, 34);
       this.cancelToolStripMenuItem.Text = "&Annuler";
       // 
       // redoToolStripMenuItem
       // 
       this.redoToolStripMenuItem.Name = "redoToolStripMenuItem";
       this.redoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-      this.redoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+      this.redoToolStripMenuItem.Size = new System.Drawing.Size(248, 34);
       this.redoToolStripMenuItem.Text = "&Rétablir";
       // 
       // toolStripSeparator3
       // 
       this.toolStripSeparator3.Name = "toolStripSeparator3";
-      this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
+      this.toolStripSeparator3.Size = new System.Drawing.Size(245, 6);
       // 
       // cutToolStripMenuItem
       // 
@@ -217,7 +219,7 @@
       this.cutToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
       this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
       this.cutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-      this.cutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+      this.cutToolStripMenuItem.Size = new System.Drawing.Size(248, 34);
       this.cutToolStripMenuItem.Text = "&Couper";
       // 
       // copyToolStripMenuItem
@@ -226,7 +228,7 @@
       this.copyToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
       this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
       this.copyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-      this.copyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+      this.copyToolStripMenuItem.Size = new System.Drawing.Size(248, 34);
       this.copyToolStripMenuItem.Text = "Co&pier";
       // 
       // pasteToolStripMenuItem
@@ -235,18 +237,18 @@
       this.pasteToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
       this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
       this.pasteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-      this.pasteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+      this.pasteToolStripMenuItem.Size = new System.Drawing.Size(248, 34);
       this.pasteToolStripMenuItem.Text = "Co&ller";
       // 
       // toolStripSeparator4
       // 
       this.toolStripSeparator4.Name = "toolStripSeparator4";
-      this.toolStripSeparator4.Size = new System.Drawing.Size(177, 6);
+      this.toolStripSeparator4.Size = new System.Drawing.Size(245, 6);
       // 
       // selectAllToolStripMenuItem
       // 
       this.selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
-      this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+      this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(248, 34);
       this.selectAllToolStripMenuItem.Text = "Sélectio&nner tout";
       // 
       // languagetoolStripMenuItem
@@ -255,20 +257,20 @@
             this.frenchToolStripMenuItem,
             this.englishToolStripMenuItem});
       this.languagetoolStripMenuItem.Name = "languagetoolStripMenuItem";
-      this.languagetoolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+      this.languagetoolStripMenuItem.Size = new System.Drawing.Size(105, 29);
       this.languagetoolStripMenuItem.Text = "Language";
       // 
       // frenchToolStripMenuItem
       // 
       this.frenchToolStripMenuItem.Name = "frenchToolStripMenuItem";
-      this.frenchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+      this.frenchToolStripMenuItem.Size = new System.Drawing.Size(177, 34);
       this.frenchToolStripMenuItem.Text = "Français";
       this.frenchToolStripMenuItem.Click += new System.EventHandler(this.FrenchToolStripMenuItem_Click);
       // 
       // englishToolStripMenuItem
       // 
       this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-      this.englishToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+      this.englishToolStripMenuItem.Size = new System.Drawing.Size(177, 34);
       this.englishToolStripMenuItem.Text = "Anglais";
       this.englishToolStripMenuItem.Click += new System.EventHandler(this.EnglishToolStripMenuItem_Click);
       // 
@@ -277,13 +279,13 @@
       this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
       this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-      this.helpToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+      this.helpToolStripMenuItem.Size = new System.Drawing.Size(64, 29);
       this.helpToolStripMenuItem.Text = "&Aide";
       // 
       // aboutToolStripMenuItem
       // 
       this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-      this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+      this.aboutToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
       this.aboutToolStripMenuItem.Text = "À &propos de...";
       this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
       // 
@@ -301,7 +303,7 @@
       this.labelNumberOfLinesBefore.AutoSize = true;
       this.labelNumberOfLinesBefore.Location = new System.Drawing.Point(26, 256);
       this.labelNumberOfLinesBefore.Name = "labelNumberOfLinesBefore";
-      this.labelNumberOfLinesBefore.Size = new System.Drawing.Size(396, 20);
+      this.labelNumberOfLinesBefore.Size = new System.Drawing.Size(600, 29);
       this.labelNumberOfLinesBefore.TabIndex = 10;
       this.labelNumberOfLinesBefore.Text = "Number of line before and after  the searched keyword:";
       // 
@@ -310,13 +312,13 @@
       this.textBoxNumberOfLinesBefore.Location = new System.Drawing.Point(430, 256);
       this.textBoxNumberOfLinesBefore.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
       this.textBoxNumberOfLinesBefore.Name = "textBoxNumberOfLinesBefore";
-      this.textBoxNumberOfLinesBefore.Size = new System.Drawing.Size(86, 26);
+      this.textBoxNumberOfLinesBefore.Size = new System.Drawing.Size(86, 35);
       this.textBoxNumberOfLinesBefore.TabIndex = 11;
-      this.textBoxNumberOfLinesBefore.Text = "1";
+      this.textBoxNumberOfLinesBefore.Text = "0";
       // 
       // FormMain
       // 
-      this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+      this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(1429, 773);
       this.Controls.Add(this.textBoxNumberOfLinesBefore);
