@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Reflection;
 using System.Windows.Forms;
+using System.IO;
 
 namespace FredLogViewer
 {
@@ -27,12 +28,14 @@ namespace FredLogViewer
         if (attributes.Length > 0)
         {
           AssemblyTitleAttribute titleAttribute = (AssemblyTitleAttribute)attributes[0];
-          if (titleAttribute.Title != "")
+          if (titleAttribute.Title != string.Empty)
           {
             return titleAttribute.Title;
           }
         }
-        return System.IO.Path.GetFileNameWithoutExtension(Assembly.GetExecutingAssembly().CodeBase);
+
+        // Si pas d'attribut, on retourne le nom de l'assembly
+        return Path.GetFileNameWithoutExtension(Assembly.GetExecutingAssembly().CodeBase);
       }
     }
 
@@ -51,8 +54,10 @@ namespace FredLogViewer
         object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyDescriptionAttribute), false);
         if (attributes.Length == 0)
         {
-          return "";
+          return string.Empty;
         }
+
+        // On retourne la description de l'assembly
         return ((AssemblyDescriptionAttribute)attributes[0]).Description;
       }
     }
@@ -64,8 +69,10 @@ namespace FredLogViewer
         object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyProductAttribute), false);
         if (attributes.Length == 0)
         {
-          return "";
+          return string.Empty;
         }
+
+        // On retourne le nom du produit
         return ((AssemblyProductAttribute)attributes[0]).Product;
       }
     }
@@ -77,8 +84,10 @@ namespace FredLogViewer
         object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false);
         if (attributes.Length == 0)
         {
-          return "";
+          return string.Empty;
         }
+
+        // On retourne le copyright de la licence
         return ((AssemblyCopyrightAttribute)attributes[0]).Copyright;
       }
     }
@@ -90,8 +99,10 @@ namespace FredLogViewer
         object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false);
         if (attributes.Length == 0)
         {
-          return "";
+          return string.Empty;
         }
+        
+        // On retourne le nom de l'entreprise
         return ((AssemblyCompanyAttribute)attributes[0]).Company;
       }
     }

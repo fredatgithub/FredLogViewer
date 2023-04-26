@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FredLogViewer
@@ -9,7 +6,7 @@ namespace FredLogViewer
   internal static class Program
   {
     /// <summary>
-    /// Point d'entrée principal de l'application.
+    /// Point d'entrée principale de l'application.
     /// </summary>
     [STAThread]
     static void Main()
